@@ -1,0 +1,140 @@
+#define DELAY            50
+#define PLAY_CODE         1
+#define RECEIVE_CODE      2
+#define VICTORY           3
+#define DEFEAT            4
+
+const int detectPinArr[]={3,5,7,9},
+    lightPinArr[]={2,4,6,8},
+    buzzerPin=10,
+    toneArr[]={523.25,659.25,783.99,987.77};
+int pinAmount=4;
+int gameState=PLAY_CODE;
+int codeLength=4;
+int colorCode[10];
+int currCodeIndex = 0;
+
+void codeRandomize() {
+  for(int i=0;i<codeLength;i++) {
+    colorCode[i]=random(1,5);
+  }
+}
+
+void setup()
+{
+  for(int i=0;i<pinAmount;i++) {
+    pinMode(detectPinArr[i],INPUT);
+    digitalWrite(detectPinArr[i],HIGH);
+    pinMode(lightPinArr[i],OUTPUT);
+  }
+  pinMode(buzzerPin,OUTPUT);
+  randomSeed(analogRead(0));
+}
+
+void loop()
+{
+  switch(gameState) {
+    case PLAY_CODE:
+      codeRandomize();
+      for(int i=0;i<codeLength;i++) {
+        digitalWrite(lightPinArr[colorCode[i]-1],HIGH);
+        tone(buzzerPin,toneArr[colorCode[i]-1]);
+        delay(1000);
+        digitalWrite(lightPinArr[colorCode[i]-1],LOW);
+        noTone(buzzerPin);
+        delay(100);
+      }
+      currCodeIndex=0;
+      gameState=RECEIVE_CODE;
+      break;
+    case RECEIVE_CODE:
+      for(int i=0;i<pinAmount;i++) {
+        if(!digitalRead(detectPinArr[i])) {
+          if(colorCode[currCodeIndex]-1==i) {
+            if(currCodeIndex<codeLength-1) {
+              currCodeIndex++;
+            } else {
+              gameState=VICTORY;
+              currCodeIndex=0;
+            }
+          } else {
+            gameState=DEFEAT;
+          }
+          digitalWrite(lightPinArr[i],HIGH);
+          tone(buzzerPin,toneArr[i]);
+          delay(600);
+          digitalWrite(lightPinArr[i],LOW);
+          noTone(buzzerPin);
+          delay(100);
+        }
+      }
+      break;
+    case VICTORY:
+      digitalWrite(lightPinArr[0],HIGH);
+      digitalWrite(lightPinArr[1],HIGH);
+      digitalWrite(lightPinArr[2],HIGH);
+      digitalWrite(lightPinArr[3],HIGH);
+      tone(buzzerPin,523.25);
+      delay(500);
+      digitalWrite(lightPinArr[0],LOW);
+      digitalWrite(lightPinArr[1],LOW);
+      digitalWrite(lightPinArr[2],LOW);
+      digitalWrite(lightPinArr[3],LOW);
+      noTone(buzzerPin);
+      delay(500);
+      digitalWrite(lightPinArr[0],HIGH);
+      digitalWrite(lightPinArr[1],HIGH);
+      digitalWrite(lightPinArr[2],HIGH);
+      digitalWrite(lightPinArr[3],HIGH);
+      tone(buzzerPin,659.25);
+      delay(500);
+      digitalWrite(lightPinArr[0],LOW);
+      digitalWrite(lightPinArr[1],LOW);
+      digitalWrite(lightPinArr[2],LOW);
+      digitalWrite(lightPinArr[3],LOW);
+      noTone(buzzerPin);
+      delay(500);
+      digitalWrite(lightPinArr[0],HIGH);
+      digitalWrite(lightPinArr[1],HIGH);
+      digitalWrite(lightPinArr[2],HIGH);
+      digitalWrite(lightPinArr[3],HIGH);
+      tone(buzzerPin,783.99);
+      delay(450);
+      noTone(buzzerPin);
+      delay(100);
+      tone(buzzerPin,783.99);
+      delay(450);
+      digitalWrite(lightPinArr[0],LOW);
+      digitalWrite(lightPinArr[1],LOW);
+      digitalWrite(lightPinArr[2],LOW);
+      digitalWrite(lightPinArr[3],LOW);
+      noTone(buzzerPin);
+      delay(500);
+      gameState=PLAY_CODE;
+      break;
+    case DEFEAT:
+      digitalWrite(lightPinArr[3],HIGH);
+      tone(buzzerPin,622.25);
+      delay(500);
+      digitalWrite(lightPinArr[3],LOW);
+      noTone(buzzerPin);
+      delay(500);
+      digitalWrite(lightPinArr[3],HIGH);
+      tone(buzzerPin,523.25);
+      delay(500);
+      digitalWrite(lightPinArr[3],LOW);
+      noTone(buzzerPin);
+      delay(500);
+      digitalWrite(lightPinArr[3],HIGH);
+      tone(buzzerPin,392.00);
+      delay(1000);
+      digitalWrite(lightPinArr[3],LOW);
+      noTone(buzzerPin);
+      delay(500);
+      gameState=PLAY_CODE;
+      break;
+    default:
+      break;
+  }
+  delay(DELAY);
+}
