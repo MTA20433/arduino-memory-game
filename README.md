@@ -73,3 +73,8 @@ First, the label indicating that the prototype is a memory game was very helpful
 In accordance to our affordance scheme (go back to slide 8 with the affordance scheme), both of the participants were able to tell that each of the buttons corresponds to the nearby LED and that by pressing it, the LED would turn on. (go back to last slide)
 
 The only element that confused one of the participants was the speaker, as they were not able to tell what it was used for.
+
+Additionally, we have an illustration of the interaction design framework, devised during the design phase of the project. This illustration is seen on Figure 5.
+
+![interaction design framework](https://ucf13584e35b23be3294a0d508fd.dl.dropboxusercontent.com/cd/0/inline/A2oFfozQ76bKUVabB80D-VSLMEfebP-BRvFkLq4_ygI7fd3DzgIXg8sZUAsn_sgIBf_GnvAk_krZSo3i3SdaMUu78VIue78NKmfnjwKzH3C4yd2pUt3nyM2118HDs6yZPRA/file#)
+_Figure 5: interaction design framework._
