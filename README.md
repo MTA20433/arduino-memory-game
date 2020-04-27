@@ -68,8 +68,6 @@ The test was done using the mental model elicitation process: the participants w
 ## Notes & Comparison
 From the evaluation, several feedback points were gathered. 
 
-The most important ones are shown in this slide. 
-
 First, the label indicating that the prototype is a memory game was very helpful in painting the right picture in the participants’ mental model.
 
 In accordance to our affordance scheme (go back to slide 8 with the affordance scheme), both of the participants were able to tell that each of the buttons corresponds to the nearby LED and that by pressing it, the LED would turn on. (go back to last slide)
