@@ -47,7 +47,7 @@ It will always start from the point marked by the black dot. As seen in the demo
 _Figure 3: the state diagram._
 
 ## Affordance Scheme
-Due to the nature of our prototype, the affordance scheme is rather simple since the only inputs are the buttons that light up the different LEDs. The affordance scheme is visualized on Figure 4
+Due to the nature of our prototype, the affordance scheme is rather simple since the only inputs are the buttons that light up the different LEDs. The affordance scheme is visualized on Figure 4.
 
 Each LED indicates that it is related to a light by being placed directly under that light.
 
