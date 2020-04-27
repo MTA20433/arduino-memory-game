@@ -1,5 +1,5 @@
 # arduino-memory-game
-A memory game built using an Arduino Uno - watch the [showcase video](https://www.youtube.com/watch?v=J5NjgtZ_BkU)!
+A memory game built using an Arduino Uno - watch the [presentation video](https://www.youtube.com/watch?v=J5NjgtZ_BkU)!
 
 ## Storyboard
 Starting out, we devised a storyboard as a means of quantifying how our solution would work on a specific scenario, along with exactly what problem it would solve. The storyboard can be seen on Figure 1.
