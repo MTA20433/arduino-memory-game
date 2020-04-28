@@ -15,7 +15,7 @@ The problem/need is that the user cannot bring their current memory game and eas
 _Figure 1: the storyboard._
 
 ## Mapping Scheme
-The design also makes use of different mapping techniques. For example, the four input buttons are positioned in close proximity to- and in direct alignment with the corresponding LED lights, following the principles of proximity and arrangement.
+The design also makes use of different mapping techniques. For example, the four input buttons are positioned in close proximity to- and in direct alignment with the corresponding LED lights, following the principles of proximity and arrangement. An illustration of our mapping scheme is also seen on Figure 2.
 
 Furthermore, since each input mechanism only controls two states (pressed/not pressed), with eight states in total, we use a linear discrete input type in the form of buttons.
 
@@ -23,8 +23,11 @@ In terms of feedback types, the solution has several. First off, the physical co
 
 Other feedback types supported by the solution include both audible- and visual feedback, with distinctly different sounds for each of the four keys, and two different multi-key tunes that play whenever a sequence is either correctly- or incorrectly repeated by the user, along with a designated LED for each of the four buttons with different colors.
 
+![mapping scheme](https://www.dropbox.com/s/7h7cj4bgvkips80/State%20diagram.png?dl=0&raw=1)
+_Figure 2: the mapping scheme._
+
 ## Circuit Diagram
-As seen in Figure 2, the circuit contains the Arduino, five resistors, the four LEDs with their corresponding buttons and, finally, the speaker. 
+As seen in Figure 3, the circuit contains the Arduino, five resistors, the four LEDs with their corresponding buttons and, finally, the speaker. 
 
 The resistors are used to avoid power surges and breaking the LEDs or the speaker. 
 
@@ -37,17 +40,17 @@ Pins D3, D5, D7 and D9 are used as input pins and they read the different button
 Pin D10 is also used as an output pin and it powers up the speaker, sending the data necessary to play different sounds based on which LED is lit up.
 
 ![circuit diagram](https://www.dropbox.com/s/7wf2yuy3elj7w6f/circuit.png?dl=0&raw=1)
-_Figure 2: the circuit diagram._
+_Figure 3: the circuit diagram._
 
 ## State Diagram
-The prototype can take on the states described in Figure 3.
+The prototype can take on the states described in Figure 4.
 It will always start from the point marked by the black dot. As seen in the demo, it will show a randomized 4-LED Sequence, after which it will transition to a receiving state. There, the user can keep inputting LEDs in a sequence, until it either matches the original random sequence (which leads to a Victory state) or it differs from it (which leads to a Lose state). The victory or lose state then plays its preset light and sound sequence, then it returns to playing a new randomized 4-LED sequence, starting a new game.
 
-![state diagram](https://www.dropbox.com/s/7h7cj4bgvkips80/State%20diagram.png?dl=0&raw=1)
-_Figure 3: the state diagram._
+![state diagram](https://www.dropbox.com/s/oxjqsoggn5hnhen/94690374_266612734501396_2382678775843258368_n.png?dl=0&raw=1)
+_Figure 4: the state diagram._
 
 ## Affordance Scheme
-Due to the nature of our prototype, the affordance scheme is rather simple since the only inputs are the buttons that light up the different LEDs. The affordance scheme is visualized on Figure 4.
+Due to the nature of our prototype, the affordance scheme is rather simple since the only inputs are the buttons that light up the different LEDs. The affordance scheme is visualized on Figure 5.
 
 Each LED indicates that it is related to a light by being placed directly under that light.
 
@@ -56,7 +59,7 @@ The perceived affordance for each of the LEDs is that if you press a button, the
 Pressing a button gives feedback in two ways: the first is the corresponding LED lighting up and the other is playing a color-specific tune.
 
 ![affordance scheme](https://www.dropbox.com/s/7iim302kp2jwe4p/affordance.jpg?dl=0&raw=1)
-_Figure 4: the affordance scheme._
+_Figure 5: the affordance scheme._
 
 ## Evaluation
 As the mini-project was worked on in rather difficult circumstances, the final digital artifact for the mini-project is essentially a high fidelity prototype of what we had in mind when starting to work with this. Therefore, the test was conducted on the digital artifact itself, as it was very easy to build and modify using a breadboard.
@@ -75,7 +78,7 @@ In accordance to our affordance scheme (go back to slide 8 with the affordance s
 The only element that confused one of the participants was the speaker, as they were not able to tell what it was used for.
 
 ## Interaction Design Framework
-Additionally, we have an illustration of the interaction design framework, devised during the design phase of the project. This illustration is shown on Figure 5.
+Additionally, we have an illustration of the interaction design framework, devised during the design phase of the project. This illustration is shown on Figure 6.
 
 ![interaction design framework](https://www.dropbox.com/s/n9zj2btnphywl2k/94871190_899880120452404_4736658850797584384_n.png?dl=0&raw=1)
-_Figure 5: interaction design framework._
+_Figure 6: interaction design framework._
