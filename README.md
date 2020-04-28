@@ -11,7 +11,7 @@ The problem/need is that the user cannot bring their current memory game and eas
 * The different types of feedback is shown in the fourth frame of the storyboard, where the solution is shown flashing and making sounds after a user clicks it.
 * Finally, the storyboard ends in the fifth frame with the user appily using the solution in a way that the previous games did not allow for.
 
-![storyboard figure](https://uc8518aa3373166649fb73898fe0.dl.dropboxusercontent.com/cd/0/inline/A2pk-JZPhyjEfuQto_JoxzB5etvXUB5PHJJmADeaOpshwW_JVheOZv9RkygAGTEiJr22eXx6uSMQKq-VkxG2U8IF801WYSsc19M0MY4WXMxmGIv0ZHaXuie10jdvtuXLzXM/file#)
+![storyboard figure](https://www.dropbox.com/s/llshgfezcufet3a/storyboard.jpg?dl=0&raw=1)
 _Figure 1: the storyboard._
 
 ## Mapping Scheme
@@ -36,14 +36,14 @@ Pins D3, D5, D7 and D9 are used as input pins and they read the different button
 
 Pin D10 is also used as an output pin and it powers up the speaker, sending the data necessary to play different sounds based on which LED is lit up.
 
-![circuit diagram](https://uc037ce050420471928ddce3ca80.dl.dropboxusercontent.com/cd/0/inline/A2qmFyr683Zd_z1kd92yFeqqYR1pt5anEFH2DvBs8NIcWHMGlmFGNXCFqpeRHahKNDyeyb3eYMyE-Jcb535cQZI45bzyPdb9ChdG0W5-b0_M8fODlSRYPcucBZoTynmPtk8/file#)
+![circuit diagram](https://www.dropbox.com/s/7wf2yuy3elj7w6f/circuit.png?dl=0&raw=1)
 _Figure 2: the circuit diagram._
 
 ## State Diagram
 The prototype can take on the states described in Figure 3.
 It will always start from the point marked by the black dot. As seen in the demo, it will show a randomized 4-LED Sequence, after which it will transition to a receiving state. There, the user can keep inputting LEDs in a sequence, until it either matches the original random sequence (which leads to a Victory state) or it differs from it (which leads to a Lose state). The victory or lose state then plays its preset light and sound sequence, then it returns to playing a new randomized 4-LED sequence, starting a new game.
 
-![state diagram](https://uc4fe3c16c9cc19210d982f35a7c.dl.dropboxusercontent.com/cd/0/inline/A2pJXadoTmjQfLEUO9mzXbGe01SA0-myYBesT3rzcTeQpQwaTbCRX3MmFaPqYLLM0WAbIrkceEPQKo5SrQOlGoQVYPnyCpqJU4M273VLKRajvKm0TLPJOVJwlfUN68X3zNU/file#)
+![state diagram](https://www.dropbox.com/s/7h7cj4bgvkips80/State%20diagram.png?dl=0&raw=1)
 _Figure 3: the state diagram._
 
 ## Affordance Scheme
@@ -55,7 +55,7 @@ The perceived affordance for each of the LEDs is that if you press a button, the
 
 Pressing a button gives feedback in two ways: the first is the corresponding LED lighting up and the other is playing a color-specific tune.
 
-![affordance scheme](https://uce32e4b3e49db0931e21e695ec1.dl.dropboxusercontent.com/cd/0/inline/A2p10tZL4iSOsJBEqQCuVAH2DsdVXEOI1m5n0YZvMnC64akbFVe-RTOzaSgu80z8bbaLPkUwlnX0N2Ya1f0wB66gGfT19Q8yPJDZvBT0Y4Pw1Na5ITcTTn9DJBhL85q48_I/file#)
+![affordance scheme](https://www.dropbox.com/s/7iim302kp2jwe4p/affordance.jpg?dl=0&raw=1)
 _Figure 4: the affordance scheme._
 
 ## Evaluation
@@ -77,5 +77,5 @@ The only element that confused one of the participants was the speaker, as they 
 ## Interaction Design Framework
 Additionally, we have an illustration of the interaction design framework, devised during the design phase of the project. This illustration is shown on Figure 5.
 
-![interaction design framework](https://ucf13584e35b23be3294a0d508fd.dl.dropboxusercontent.com/cd/0/inline/A2oFfozQ76bKUVabB80D-VSLMEfebP-BRvFkLq4_ygI7fd3DzgIXg8sZUAsn_sgIBf_GnvAk_krZSo3i3SdaMUu78VIue78NKmfnjwKzH3C4yd2pUt3nyM2118HDs6yZPRA/file#)
+![interaction design framework](https://www.dropbox.com/s/n9zj2btnphywl2k/94871190_899880120452404_4736658850797584384_n.png?dl=0&raw=1)
 _Figure 5: interaction design framework._
